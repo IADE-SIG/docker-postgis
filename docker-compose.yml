@@ -1,0 +1,21 @@
+version: '3.1'
+services:
+  app:
+    image: app
+    volumes:
+      - ./app:/app
+    ports:
+      - 3000:3000
+    command: bash -c "npm i && npm run start"
+  db:
+    image: postgis/postgis:15-3.3 
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: foobar
+      POSTGRES_USER: postgres
+      POSTGRES_DB: mydb
+    volumes:
+      - ./docker-data/db:/var/lib/postgresql/data
+      - ./sql:/docker-entrypoint-initdb.d
