@@ -4,11 +4,19 @@
 
 ## Índice <!-- omit in toc -->
 
+- [Quickstart](#quickstart)
 - [Base de dados](#base-de-dados)
 - [Aplicação](#aplicação)
   - [Imagem Docker](#imagem-docker)
 - [`docker-compose`](#docker-compose)
 - [Utilização da aplicação](#utilização-da-aplicação)
+
+## Quickstart
+
+```bash
+docker build -t app -f app.Dockerfile .
+docker-compose up
+```
 
 ## Base de dados
 
