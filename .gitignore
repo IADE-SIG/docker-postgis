@@ -1,4 +1,4 @@
 */node_modules/
 docker-data
-spatial-data
+spatial-data/gadm*
 .vscode

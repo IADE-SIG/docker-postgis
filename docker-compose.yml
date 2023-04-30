@@ -7,6 +7,8 @@ services:
     ports:
       - 3000:3000
     command: bash -c "npm i && npm run start"
+    build:
+      dockerfile: app.Dockerfile
   db:
     image: postgis/postgis:15-3.3 
     restart: always
